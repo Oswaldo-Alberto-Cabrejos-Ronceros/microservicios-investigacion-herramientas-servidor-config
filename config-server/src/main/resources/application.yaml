@@ -7,4 +7,10 @@ spring:
     cloud:
       config:
         server:
-          
+          git:
+            default-label:
+              main
+            uri:
+              https://github.com/Oswaldo-Alberto-Cabrejos-Ronceros/microservicios-investigacion-herramientas-servidor-config.git
+            search-paths:
+              config-data
