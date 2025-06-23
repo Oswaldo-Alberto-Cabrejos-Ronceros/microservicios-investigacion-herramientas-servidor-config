@@ -11,10 +11,11 @@ eureka:
 logging:
   level:
     org.springframework.cloud.gateway: DEBUG
+    reactor.netty.http.client: DEBUG
+    org.springframework.web: DEBUG
 spring:
   application:
-    name:
-      gateway-service
+    name: gateway-service
   cloud:
     gateway:
       discovery:
@@ -36,4 +37,12 @@ spring:
         - id: microservice-venta
           uri: lb://microservice-venta
           predicates:
-            - Path=/api/venta/**
+            - Path=/venta/**
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
