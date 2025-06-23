@@ -24,18 +24,18 @@ spring:
           lower-case-service-id: true
       routes:
         - id: categoria-service
-          uri: lb://categoria-service
+          uri: lb://CATEGORIA-SERVICE
           predicates:
             - Path=/categoria/**
         - id: microservice-cliente
-          uri: lb://microservice-cliente
+          uri: lb://MICROSERVICE-CLIENTE
           predicates:
             - Path=/cliente/**
-        - id: microservice-producto
+        - id: MICROSERVICE-PRODUCTO
           uri: lb://microservice-producto
           predicates:
             - Path=/producto/**
-        - id: microservice-venta
+        - id: MICROSERVICE-VENTA
           uri: lb://microservice-venta
           predicates:
             - Path=/venta/**
