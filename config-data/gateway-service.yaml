@@ -33,4 +33,4 @@ spring:
         - id: microservice-venta
           uri: lb://microservice-venta
           predicates:
-            - Path=/venta/**
+            - Path=/api/venta/**
