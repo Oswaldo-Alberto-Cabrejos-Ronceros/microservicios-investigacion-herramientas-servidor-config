@@ -21,6 +21,7 @@ spring:
       discovery:
         locator:
           enabled: true
+          lower-case-service-id: true
       routes:
         - id: categoria-service
           uri: lb://categoria-service
@@ -46,3 +47,5 @@ management:
   endpoint:
     health:
       show-details: always
+    gateway:
+      enabled: true
